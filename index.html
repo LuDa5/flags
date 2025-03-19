@@ -10,26 +10,28 @@
 </head>
 
 <body>
-    <header>
-        <h1 data-lang="title">Welcome to our Store</h1>
-        <nav>
-            <a href="products.html" data-lang="products">Products</a>
-            <a href="cart.html" data-lang="cart">Cart (<span id="cart-count">0</span>)</a>
-        </nav>
-        <select id="language-selector">
-            <option value="en">🇺🇸 English</option>
-            <option value="uk">🇺🇦 Українська</option>
-            <option value="pl">🇵🇱 Polski</option>
-        </select>
-    </header>
+<header>
+    <nav>
+        <div class="language-switcher">
+            <a href="#" data-lang="en"><img src="images/en.png" alt="English"></a>
+            <a href="#" data-lang="uk"><img src="images/ua.png" alt="Українська"></a>
+            <a href="#" data-lang="pl"><img src="images/pl.png" alt="Polski"></a>
+        </div>
+        <a href="#" data-lang="products">Products</a>
+        <a href="#" data-lang="cart">Cart</a>
+    </nav>
+</header>
 
-    <main>
-        <h2 data-lang="welcome">Find the best products for you!</h2>
-    </main>
+<main>
+    <h1 data-lang="title">Welcome to our Store</h1>
+    <p data-lang="welcome">Find the best products for you!</p>
+</main>
 
-    <script src="/js/lang.js"></script>
+<script src="js/lang.js"></script>
     <script src="/js/cart.js"></script>
     <script src="/js/script.js"></script>
+
+
 </body>
 
 </html>

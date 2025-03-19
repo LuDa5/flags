@@ -1,0 +1,20 @@
+{
+    "en": {
+        "title": "Welcome to our Store",
+        "products": "Products",
+        "cart": "Cart",
+        "welcome": "Find the best products for you!"
+    },
+    "uk": {
+        "title": "Ласкаво просимо до нашого магазину",
+        "products": "Товари",
+        "cart": "Кошик",
+        "welcome": "Знайдіть найкращі товари для себе!"
+    },
+    "pl": {
+        "title": "Witamy w naszym sklepie",
+        "products": "Produkty",
+        "cart": "Koszyk",
+        "welcome": "Znajdź najlepsze produkty dla siebie!"
+    }
+}

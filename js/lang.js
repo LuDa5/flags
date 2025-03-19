@@ -1,34 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const languageSelector = document.getElementById("language-selector");
+  const langLinks = document.querySelectorAll(".language-switcher a");
+  const textElements = document.querySelectorAll("[data-lang]");
+  const translationsUrl = "/translations.json"; // Шлях до JSON-файлу
 
-  // Отримуємо мову з localStorage або встановлюємо "en" за замовчуванням
+  // Отримуємо збережену мову або встановлюємо "en" за замовчуванням
   const savedLang = localStorage.getItem("lang") || "en";
-  languageSelector.value = savedLang;
+  loadTranslations(savedLang);
 
-  // Функція для переходу на відповідну мовну версію
-  function changeLanguage(lang) {
-    localStorage.setItem("lang", lang);
-    let currentPage = window.location.pathname;
-
-    if (currentPage.includes("products")) {
-      window.location.href =
-        lang === "en"
-          ? "/peterfisch/products.html"
-          : lang === "uk"
-          ? "/peterfisch/products-uk.html"
-          : "/peterfisch/products-pl.html";
-    } else {
-      window.location.href =
-        lang === "en"
-          ? "/peterfisch/index.html"
-          : lang === "uk"
-          ? "/peterfisch/index-uk.html"
-          : "/peterfisch/index-pl.html";
-    }
-  }
-
-  // При зміні мови оновлюємо сторінку
-  languageSelector.addEventListener("change", function () {
-    changeLanguage(this.value);
+  // Додаємо обробник кліків для кожного прапорця
+  langLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const selectedLang = this.getAttribute("data-lang");
+      localStorage.setItem("lang", selectedLang);
+      loadTranslations(selectedLang);
+    });
   });
+
+  // Функція для завантаження перекладів через AJAX
+  function loadTranslations(lang) {
+    fetch(translationsUrl)
+      .then((response) => response.json()) // Перетворюємо відповідь у JSON
+      .then((translations) => {
+        textElements.forEach((element) => {
+          const key = element.getAttribute("data-lang");
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+      })
+      .catch((error) =>
+        console.error("Помилка завантаження перекладів:", error)
+      );
+  }
 });
