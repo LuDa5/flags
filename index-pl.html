@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <base href="/online-store/">
+    <link rel="stylesheet" href="peterfisch/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 data-lang="title">Witamy w naszym sklepie</h1>
+        <nav>
+            <a href="products.html" data-lang="products">Produkty</a>
+            <a href="cart.html" data-lang="cart">Wózek (<span id="cart-count">0</span>)</a>
+        </nav>
+        <select id="language-selector">
+            <option value="en">🇺🇸 English</option>
+            <option value="uk">🇺🇦 Українська</option>
+            <option value="pl">🇵🇱 Polski</option>
+        </select>
+    </header>
+
+    <main>
+        <h2 data-lang="welcome">Znajdź najlepsze produkty dla siebie!</h2>
+    </main>
+
+    <script src="peterfisch/js/lang.js"></script>
+    <script src="peterfisch/js/cart.js"></script>
+    <script src="peterfisch/js/script.js"></script>
+</body>
+
+</html>

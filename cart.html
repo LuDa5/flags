@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="peterfisch/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 data-lang="cart">Shopping Cart</h1>
+        <nav>
+            <a href="index.html" data-lang="home">Home</a>
+            <a href="products.html" data-lang="products">Products</a>
+        </nav>
+        <select id="language-selector">
+            <option value="en">🇺🇸 English</option>
+            <option value="uk">🇺🇦 Українська</option>
+            <option value="pl">🇵🇱 Polski</option>
+        </select>
+    </header>
+
+    <main>
+        <ul id="cart-items"></ul>
+        <button id="clear-cart" data-lang="clear-cart">Clear Cart</button>
+    </main>
+
+    <script src="peterfisch/js/lang.js"></script>
+    <script src="peterfisch/js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 data-lang="products">Products</h1>
+        <nav>
+            <a href="index.html" data-lang="home">Home</a>
+            <a href="cart.html" data-lang="cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+        <select id="language-selector">
+            <option value="en">🇺🇸 English</option>
+            <option value="uk">🇺🇦 Українська</option>
+            <option value="pl">🇵🇱 Polski</option>
+        </select>
+    </header>
+
+    <main>
+        <div class="product">
+            <h2 data-lang="product1">Product 1</h2>
+            <p data-lang="price">$10</p>
+            <button class="add-to-cart" data-id="1" data-lang="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h2 data-lang="product2">Product 2</h2>
+            <p data-lang="price">$20</p>
+            <button class="add-to-cart" data-id="2" data-lang="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
+
+    <script src="/npx/src/lang.js"></script>
+    <script src="/npx/src/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+
+/* Загальні стилі */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Хедер */
+header {
+  background: #569579;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Перемикач мови */
+#language-selector {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+/* Контент */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Товари */
+.product {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 250px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+}
+
+.add-to-cart {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-to-cart:hover {
+  background: #218838;
+}
+
+/* Кошик */
+#cart-items {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  max-width: 400px;
+  margin: auto;
+}
+
+#cart-items li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clear-cart {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+#clear-cart:hover {
+  background: #c82333;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .product {
+    width: 90%;
+  }
+}
